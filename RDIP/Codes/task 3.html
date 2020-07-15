@@ -13,7 +13,7 @@
 
   body
   {
-    max-width:1050px;
+    max-width:1150px;
     max-height:1000px;
     margin:auto;
 
@@ -67,6 +67,7 @@ color:white;
 {
     background-color: white;
     height:1200px;
+    width: 1070px;
     font-family: sans-serif;
     margin:40px;
     box-shadow: 0px 20px 25px 5px   lightslategray;
@@ -76,8 +77,8 @@ color:white;
 {
 padding-left:60px;
 padding-top: 44px;
-padding-bottom: 10px
-}
+padding-bottom: 10px;
+
 #experiment select
 {
   font-size:15px;
@@ -107,7 +108,7 @@ padding-bottom: 10px
      line-height: 0.1;
      color:#00009C;
      font-weight: bolder;
-     padding-bottom: 10px;
+     
 
 }
 #demo4
@@ -122,10 +123,10 @@ padding-bottom: 10px
 }
 #demo5
 {
-   font-size:16px;
+   font-size:30px;
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
      line-height: 0.1;
-     color:#00009C;
+     color:#484848;
      font-weight: bolder;
      padding-bottom: 10px;
 
@@ -136,7 +137,7 @@ padding-bottom: 10px
 
 button {
   width: 90px;
-  height: 30px;
+  height: 100px;
 
   margin: 2px;
 
@@ -148,7 +149,8 @@ button {
   width: 300px;
   height: 30px;
   font-size: 15px;
-  margin: 10px
+  margin: 10px;
+  padding: 2px;
 }
  #b5
 {
@@ -156,6 +158,7 @@ button {
   height: 30px;
  font-size:15px;
   margin: 10px;
+  padding: 2px;
 {
   font-size:20px;
   color :black;
@@ -166,14 +169,20 @@ button {
 {
   font-size:20px;
   color :black;
-  line-height: 1.6;
+ 
+ line-height: 1.6;
+ padding: 2px;
 }
+
 #demo7
 {
   font-size:20px;
   color :black;
   line-height: 1.6;
+
 }
+
+
 
 </style></head>
 
@@ -189,16 +198,22 @@ button {
   <section id="experiment">
     <h4>Experiment</h4>
     <center>
-      <select onchange="fun1()">
+      
+
+
+      <div class="form-group">
+        <div class="col-sm-5">
+      <select onchange="fun1()" class="form-control input-small">
          <option value="none" selected>---Select Language---</option>
       <option  id="eng">English</option>
-   <option value="Hindi" id="hin"clearHindi</option></select><br><br>
+  <option value="Hindi" id="hin" >Hindi</option></select></div></div><br>
    <p id="demo"></p>
    <p id="demo1" style="color:blue; font-style: italic;font-weight:lighter;"></p>
-   <p id="demo4"></p>
+   <p id="demo4" ></p>
    <p id="demo5"></p>
     
-    <button id="b5" style="visibility: hidden" onclick="toggle()">Get Correct Sentence</button><br>
+    <button id="b5" style="visibility: hidden" onclick="toggle()" class="btn btn-secondary">Get Correct Sentence</button><br>
+<p id="demo7" ></p>
     <p id="demo7"></p>
  </center>
   </section>
