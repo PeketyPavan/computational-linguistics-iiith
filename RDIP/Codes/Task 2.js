@@ -32,10 +32,10 @@ x1=x.split(" ");
 	document.getElementById("demo5").innerHTML=""
 	document.getElementById("demo4").innerHTML=""
 	document.getElementById("demo6").innerHTML=""
-
+	document.getElementsById("demo7").innerHTML=""
 	document.getElementById("b3").style.visibility="hidden";
 	document.getElementById('b4').style.visibility="hidden"
-
+	document.getElementById('b5').style.visibility="Get Correct Sentence"
 	count=0
 
 
@@ -137,73 +137,84 @@ function reset()
 
 }
 
+fuction check()
+{
+	var x=String(document.getElementById("demo5").innerHTML).replace(\/s+$/, '');
 
-    function check()
+}
+
+
+
+function toggle()
+{
+a=maineng.indexOf(x)
+s=main[a]
+b=mainhin.indexOf(y)
+r=main1[b]
+
+
+
+if(document.getElementById("eng").selected)
+	{
+		if(document.getElementById("b5").innerHTML=="Get Correct Sentence")
+		{
+       for(i=0;i<s.length;i++)
+  { 
+   document.getElementById("demo7").innerHTML+=s[i]+"<br>";
+   document.getElementById("b5").innerHTML="Hide the correct Sentence" 
+} 
+}
+else if(document.getElementById("b5").innerHTML=="Hide the correct Sentence")
+	{
+
+   document.getElementById("demo7").innerHTML=""
+   document.getElementById("b5").innerHTML="Get Answers"
+}
+else if(document.getElementById("b5").innerHTML=="Get Answers")
 {
 
-  var x=String(document.getElementById("demo5").innerHTML).replace(/\s+$/, '');
-  c=0;
-  p=0
-  if(document.getElementById("eng").selected)
+       for(i=0;i<s.length;i++)
+  { 
+   document.getElementById("demo7").innerHTML+=s[i]+"<br>";
+   document.getElementById("b5").innerHTML="Hide the correct Sentence" 
+} 
+}
+}
+else if(document.getElementById("hin").selected)
+	{ 
+
+		if(document.getElementById("b5").innerHTML=="Get Correct Sentence")
+		{
+       for(i=0;i<r.length;i++)
+  { 
+   document.getElementById("demo7").innerHTML+=r[i]+"<br>";
+   document.getElementById("b5").innerHTML="Hide the correct Sentence" 
+} 
+}
+else if(document.getElementById("b5").innerHTML=="Hide the correct Sentence")
+	{
+
+   document.getElementById("demo7").innerHTML=""
+   document.getElementById("b5").innerHTML="Get Answers"
+}
+else if(document.getElementById("b5").innerHTML=="Get Answers")
+{
+
+	for(i=0;i<r.length;i++)
+
   {
-  for(i=0;i<10;i++)
-  {
-    for(j=0;j<main[i].length;j++)
-    {
 
-      if(x==main[i][j])
-      {
-
-        c++;
-
-      }
-    }
-  }
-
-if(c==1)
-{
-      document.getElementById("demo6").innerHTML="<span style='color:green;font-size:30px'>Right answer!!!</span>"
-
-}
-else
-{
-      document.getElementById("demo6").innerHTML="<span style='color:red;font-size:30px'>Wrong answer!!!</span>"
-
-}
-
-}
-
- else if(document.getElementById("hin").selected)
-  {
-  for(i=0;i<7;i++)
-  {
-    for(j=0;j<main1[i].length;j++)
-    {
-
-      if(x==main1[i][j])
-      {
-
-        p++;
-
-      }
-    }
-  }
-
-
-if(p==1)
-{
-      document.getElementById("demo6").innerHTML="<span style='color:green;font-size:30px'>Right answer!!!</span>"
-	  document.getElementById('b4').style.visibility="hidden" 
-      document.getElementById("b5").style.visibility="hidden";
-}
-else
-{
-      document.getElementById("demo6").innerHTML="<span style='color:red;font-size:30px'>Wrong answer!!!</span>"
-      document.getElementById('b4').style.visibility="hidden"
-      document.getElementById("b5").style.visibility="hidden";
-}
+   document.getElementById("demo7").innerHTML+=r[i]+"<br>";
+   document.getElementById("b5").innerHTML="Hide the correct Sentence" 
+}	
 
 }
 }
+}
+
+
+
+
+
 
 
