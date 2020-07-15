@@ -193,12 +193,14 @@ else
 if(p==1)
 {
       document.getElementById("demo6").innerHTML="<span style='color:green;font-size:30px'>Right answer!!!</span>"
-
+	  document.getElementById('b4').style.visibility="hidden" 
+      document.getElementById("b5").style.visibility="hidden";
 }
 else
 {
       document.getElementById("demo6").innerHTML="<span style='color:red;font-size:30px'>Wrong answer!!!</span>"
-
+      document.getElementById('b4').style.visibility="hidden"
+      document.getElementById("b5").style.visibility="hidden";
 }
 
 }
