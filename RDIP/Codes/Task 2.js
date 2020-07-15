@@ -98,7 +98,9 @@ for(i=0;i<y1.length;i++)
 button.addEventListener ("click", function() {
 	document.getElementById("demo4").innerHTML="Formed Sentence<span style='font-style:italic;color:blue;font-weight:lighter'>(after selecting words):</span>";
     document.getElementById("demo5").innerHTML+=this.innerHTML+" ";
-    this.style.visibility="hidden";
+    
+
+    this.style.display="none";
     count=count+1;
 
 
@@ -123,7 +125,7 @@ function reset()
 
   for(i=0;i<x1.length||i<y1.length;i++)
   {
-    if(document.getElementById('button'+i).style.visibility=="hidden")
+    if(document.getElementById('button'+i).style.display=="none")
     {
    document.getElementById('button'+i).style.visibility="visible";
     document.getElementById('demo4').innerHTML=""
@@ -139,6 +141,8 @@ function reset()
 
 fuction check()
 {
+	document.getElementById("b5").innerHTML="Get Correct Sentence"
+ 	document.getElementById("demo7").innerHTML=""
 	var x=String(document.getElementById("demo5").innerHTML).replace(\/s+$/, '');
 
 }
